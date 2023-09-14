@@ -1,0 +1,36 @@
+##########################################
+# File Extension Settings
+##########################################
+
+# XML Configuration Files
+[*.{xml,config,props,targets,nuspec,resx,ruleset,vsixmanifest,vsct}]
+indent_size = 2
+indent_style = space
+
+# JSON Files
+[*.{json,json5,webmanifest}]
+indent_size = 2
+indent_style = space
+
+# YAML Files
+[*.{yml,yaml}]
+indent_size = 2
+indent_style = space
+
+# Markdown Files
+[*.md]
+trim_trailing_whitespace = false
+
+# Файлы Python
+[*.py]
+
+#### Основные параметры EditorConfig ####
+
+# Отступы и интервалы
+indent_size = 4
+indent_style = space
+tab_width = 4
+
+# Предпочтения для новых строк
+end_of_line = crlf
+insert_final_newline = true
