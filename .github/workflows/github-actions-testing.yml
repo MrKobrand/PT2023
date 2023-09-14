@@ -27,4 +27,4 @@ jobs:
     
     - name: Test with pytest
       run: |
-        PYTHONPATH=./N1:./N1/src/ pytest test
+        PYTHONPATH=./N1:./N1/src/ pytest ./N1/test
