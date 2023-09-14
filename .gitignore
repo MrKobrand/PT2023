@@ -3,7 +3,9 @@
 __pycache__/
 
 # Unit test / coverage reports
+.coverage
 .pytest_cache/
+htmlcov/
 
 # Environments
 venv/
