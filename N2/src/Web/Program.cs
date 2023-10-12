@@ -26,6 +26,8 @@ public class Program
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {
+            app.UseDeveloperExceptionPage();
+            app.UseWebAssemblyDebugging();
             await app.InitialiseDatabaseAsync();
         }
         else
@@ -45,12 +47,12 @@ public class Program
 
         app.UseExceptionHandler(options => { });
 
-        app.UseResponseCompression();
         app.UseHttpsRedirection();
         app.UseStaticFiles();
         app.UseAuthorization();
         app.MapControllers();
         app.MapRazorPages();
+        app.UseBlazorFrameworkFiles();
         app.MapFallbackToFile("index.html");
 
         app.Run();

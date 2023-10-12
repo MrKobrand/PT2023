@@ -3,7 +3,6 @@ using System.IO;
 using System.Linq;
 using Application.Common.Interfaces;
 using Infrastructure.Data;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Web.Services;
 
@@ -18,7 +17,7 @@ public static class DependencyInjection
         services.AddScoped<IUser, CurrentUser>();
 
         services.AddControllers();
-        services.AddResponseCompression(x => x.EnableForHttps = true);
+        services.AddControllersWithViews();
         services.AddMvc();
         services.AddRouting(options => options.LowercaseUrls = true);
         services.AddEndpointsApiExplorer();
