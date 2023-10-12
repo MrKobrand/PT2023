@@ -6,6 +6,7 @@ using Web.Infrastructure;
 namespace Web.Controllers;
 
 [ApiController]
+[KebabCaseNaming]
 [ApiExceptionFilter]
 [Route("api/[controller]")]
 public class ApiControllerBase : ControllerBase

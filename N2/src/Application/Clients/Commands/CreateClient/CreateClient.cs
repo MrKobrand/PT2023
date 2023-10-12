@@ -1,10 +1,13 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using Application.Common.Interfaces;
+using Application.Common.Security;
+using Domain.Constants;
 using Domain.Entities;
 
 namespace Application.Clients.Commands.CreateClient;
 
+[Authorize(Roles = Roles.ADMINISTRATOR)]
 public record CreateClientCommand : IRequest<Client>
 {
     public string Name { get; init; }

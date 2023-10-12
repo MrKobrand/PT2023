@@ -1,0 +1,20 @@
+﻿@page "/car-details"
+
+<PageTitle>Товары</PageTitle>
+
+<h1>Товары</h1>
+
+<LoadingContent IsLoadingFinish="@_isLoadingFinish">
+  @foreach (var carDetail in _carDetails)
+  {
+    <div class="car-detail">
+      <input type="checkbox" checked="@(_bucket.FirstOrDefault(x => x.Id == carDetail.Id) is not null)">
+      <span>@carDetail.Name</span>
+      <span>@carDetail.Price</span>
+      <span class="to-bucket-link" @onclick="@(() => AddToBucket(carDetail))">В корзину</span>
+    </div>
+  }
+  <hr />
+  <p>Выбрано товаров: @_bucket.Count</p>
+  <p>Сумма: @CalculateTotalPrice()</p>
+</LoadingContent>

@@ -8,5 +8,10 @@ public class CreateClientCommandValidator : AbstractValidator<CreateClientComman
             .NotEmpty()
             .MaximumLength(256)
             .WithMessage("Name length must not be more than 256 symbols.");
+
+        RuleFor(v => v.Address)
+            .NotEmpty()
+            .MaximumLength(256)
+            .WithMessage("Address length must not be more than 256 symbols.");
     }
 }
