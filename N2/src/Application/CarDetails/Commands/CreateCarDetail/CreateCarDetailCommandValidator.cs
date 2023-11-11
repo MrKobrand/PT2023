@@ -1,4 +1,4 @@
-﻿namespace Application.CarDetails.Commands;
+﻿namespace Application.CarDetails.Commands.CreateCarDetail;
 
 public class CreateCarDetailCommandValidator : AbstractValidator<CreateCarDetailCommand>
 {

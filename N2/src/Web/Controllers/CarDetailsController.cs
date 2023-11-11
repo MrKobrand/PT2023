@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Application.CarDetails.Commands;
+using Application.CarDetails.Commands.CreateCarDetail;
 using Application.CarDetails.Queries.GetCarDetails;
 using Domain.Entities;
 using Microsoft.AspNetCore.Authorization;

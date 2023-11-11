@@ -5,7 +5,7 @@ using Application.Common.Security;
 using Domain.Constants;
 using Domain.Entities;
 
-namespace Application.CarDetails.Commands;
+namespace Application.CarDetails.Commands.CreateCarDetail;
 
 [Authorize(Roles = Roles.ADMINISTRATOR)]
 public record CreateCarDetailCommand : IRequest<CarDetail>

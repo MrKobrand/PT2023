@@ -1,8 +1,8 @@
 ﻿namespace Application.CarDetails.Queries.GetCarDetails;
 
-public class GetCarDetailsCommandValidator : AbstractValidator<GetCarDetailsQuery>
+public class GetCarDetailsQueryValidator : AbstractValidator<GetCarDetailsQuery>
 {
-    public GetCarDetailsCommandValidator()
+    public GetCarDetailsQueryValidator()
     {
         RuleFor(x => x.Limit)
             .GreaterThanOrEqualTo(0).WithMessage("Limit at least greater than or equal 0.");

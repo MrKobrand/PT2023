@@ -19,11 +19,6 @@ namespace Application.Clients.Queries.GetClientsWithPagination;
 public class GetClientsWithPaginationQuery : IRequest<PaginatedList<Client>>
 {
     /// <summary>
-    /// Лимит сущностей.
-    /// </summary>
-    public int Limit { get; set; } = 25;
-
-    /// <summary>
     /// Строка поиска.
     /// </summary>
     public string Search { get; set; }
@@ -63,7 +58,6 @@ public class GetClientsWithPaginationQueryHandler : IRequestHandler<GetClientsWi
 
         return await _context.Clients
             .Where(searchFilter)
-            .Take(request.Limit)
             .PaginatedListAsync(request.PageNumber, request.PageSize);
     }
 }
