@@ -1,0 +1,44 @@
+﻿:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --rt-opacity: 1;
+  --rt-color-dark: #403C63;
+}
+
+body {
+  color: var(--dark-blue-100);
+  position: relative;
+  margin: 0;
+  font-style: normal;
+  background-color: var(--dark-blue-20);
+}
+
+div {
+  font-size: 14px;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}

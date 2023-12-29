@@ -1,0 +1,13 @@
+﻿.car-detail {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.to-bucket-link {
+  color: blue;
+}
+
+.to-bucket-link:hover {
+  text-decoration: underline;
+}
